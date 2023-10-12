@@ -1,0 +1,97 @@
+body{
+    background: #000;
+    font-family: futura;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.container h1{
+    position: absolute;
+    color: aqua;
+    top: 30px;
+}
+
+.left{
+    height: 200px;
+    width: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.loader{
+    height: 100px;
+    width: 100px;
+    border: 15px solid #3e3535;
+    border-right-color:#0015b3;
+    border-radius: 50%;
+    animation: loadleft 1s infinite linear;
+}
+
+.right{
+    height: 200px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right span{
+    height: 15px;
+    width: 15px;
+    background-color: #0000ff;
+    margin-left: 10px;
+    box-shadow: 2px 2px 7px  #0015b3;
+}
+
+.right span:nth-child(1){
+    animation: loadright 900ms infinite alternate ;
+    animation-delay: 1s;
+}
+.right span:nth-child(2){
+    animation: loadright 900ms infinite alternate;
+    animation-delay: 0.7s;
+}
+.right span:nth-child(3){
+    animation: loadright 900ms infinite alternate;
+    animation-delay: 0.5s;
+}
+.right span:nth-child(4){
+    animation: loadright 900ms infinite alternate;
+    animation-delay: 0.7s;
+}
+.right span:nth-child(5){
+    animation: loadright 900ms infinite alternate;
+    animation-delay: 1s;
+}
+
+/*  Animation effects */
+
+@keyframes loadleft{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadright {
+    from{
+        margin-top: 0px;
+    }
+    to{
+        margin-bottom: 20px;
+    }
+}
+
